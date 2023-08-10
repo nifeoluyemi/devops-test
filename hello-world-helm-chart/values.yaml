@@ -7,8 +7,8 @@ fullname: "hello-world"
 replicaCount: 1
 
 image:
-  repository: hello-world
-  pullPolicy: Never
+  repository: nifeoluyemi/hello-world
+  pullPolicy: IfNotPresent
   tag: "latest"
 
 nameOverride: "hello-world"
