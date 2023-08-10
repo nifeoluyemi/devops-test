@@ -1,16 +1,29 @@
 # Devops take home assignment
 
-## Installation
-* Go through the kind installation process from their [documentation](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) 
+## Prerequisites
+- Install Docker - [documentation](https://docs.docker.com/get-docker/) 
+- Install Kind - Go through the kind installation process from their [documentation](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) 
+- Install Terraform CLI - [documentation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
 
-## Task
+## Folder Arrangment
 
-- Dockerize the `Hello World` website that's located the `src` folder.
-- Deploy the `Hello World` website in an nginx reverse proxy in a pod in the kind cluster.
-- Access the website from your browser.
-- Document the steps on how to run the project.
+#### hello-world-helm-chart
+Contains the helm chart used to install the static site to the Kind kubernetes cluster.
 
-## Presentation
-- To present this project, push it to a github repository when you are done. 
-- Setup github actions that builds and tears down the entire cluster with the pod that has the `Hello World` website. 
-- Finally, invite the interviewers to the repository.
+#### hello-world-static-website
+Contains the static webpage and dockefile used to containerize the webpage.
+
+#### hello-world-terraform
+Contains the terraform child modules. 
+
+#### hello-world-terraform-module
+Contains the terraform root modules for deploying Kind cluster and installing helm chart on Kubernetes cluster.
+
+## Running the Static Site
+## Running The Static Web App locally
+
+
+## Deploying the Kind Cluster and Hello-World Helm Chart
+```
+make deploy
+```
