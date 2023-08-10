@@ -7,23 +7,27 @@
 
 ## Folder Arrangment
 
-#### hello-world-helm-chart
+### hello-world-helm-chart
 Contains the helm chart used to install the static site to the Kind kubernetes cluster.
 
-#### hello-world-static-website
+### hello-world-static-website
 Contains the static webpage and dockefile used to containerize the webpage.
 
-#### hello-world-terraform
+### hello-world-terraform
 Contains the terraform child modules. 
 
-#### hello-world-terraform-module
+### hello-world-terraform-module
 Contains the terraform root modules for deploying Kind cluster and installing helm chart on Kubernetes cluster.
 
-## Running the Static Site
-## Running The Static Web App locally
-
-
 ## Deploying the Kind Cluster and Hello-World Helm Chart
+From the project root directory, run:
 ```
 make deploy
+```
+View the hello-world static site - http://localhost:30950
+
+## Destroying the Kind Cluster 
+From the project root directory, run:
+```
+make destroy
 ```
